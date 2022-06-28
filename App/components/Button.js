@@ -1,47 +1,45 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity} from 'react-native';
-import colors from '../config/colors';
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: colors.primary,
-    paddingVertical: 14,
-    borderRadius: 6,
-    borderWidth: 1,
-    borderColor: colors.primary,
-    marginVertical: 7,
-  },
-  containerOutline: {
-    backgroundColor: 'transparent',
-    borderColor: colors.border,
-  },
-  text: {
-    color: colors.white,
-    alignSelf: 'center',
-    fontSize: 18,
-    fontWeight: '500',
-  },
-  textOutline: {
-    color: colors.primary,
-  },
-});
+import {TouchableOpacity} from 'react-native';
+import {styled, Text} from 'dripsy';
 
 export const Button = ({
   onPress = () => {},
   children = '',
   outline = false,
 }) => {
-  const containerStyles = [styles.container];
-  const textStyles = [styles.text];
+  let containerStyle = {
+    backgroundColor: 'primary',
+    paddingVertical: '$3',
+    borderRadius: 6,
+    borderWidth: 1,
+    borderColor: 'primary',
+    marginVertical: '$2',
+  };
+
+  let textStyle = {
+    color: 'background',
+    alignSelf: 'center',
+    fontSize: 20,
+    fontWeight: 'black',
+  };
 
   if (outline) {
-    containerStyles.push(styles.containerOutline);
-    textStyles.push(styles.textOutline);
+    containerStyle = {
+      ...containerStyle,
+      ...{backgroundColor: 'transparent', borderColor: 'secondary'},
+    };
+
+    textStyle = {
+      ...textStyle,
+      ...{color: 'secondary'},
+    };
   }
 
+  const StyledTouchableOpacity = styled(TouchableOpacity)(containerStyle);
+
   return (
-    <TouchableOpacity onPress={onPress} style={containerStyles}>
-      <Text style={textStyles}>{children}</Text>
-    </TouchableOpacity>
+    <StyledTouchableOpacity onPress={onPress}>
+      <Text sx={textStyle}>{children}</Text>
+    </StyledTouchableOpacity>
   );
 };

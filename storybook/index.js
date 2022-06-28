@@ -1,5 +1,5 @@
 // if you use expo remove this line
-import {AppRegistry} from 'react-native';
+import {AppRegistry, LogBox} from 'react-native';
 import {name as appName} from '../app.json';
 
 import {getStorybookUI, configure, addDecorator} from '@storybook/react-native';
@@ -7,6 +7,10 @@ import {withKnobs} from '@storybook/addon-knobs';
 import {loadStories} from './storyLoader';
 
 import './rn-addons';
+
+// ignore 'EventEmitter.removeListener(\'change\', ...): Method has been deprecated warning
+LogBox.ignoreLogs(["EventEmitter.removeListener"]);
+
 
 // enables knobs for all stories
 addDecorator(withKnobs);
