@@ -10001,7 +10001,7 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^2.0.2:
+prettier@^2.0.2, prettier@^2.0.5:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.7.1.tgz#e235806850d057f97bb08368a4f7d899f7760c64"
   integrity sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==
@@ -10523,6 +10523,16 @@ react-native-screens@^3.13.1:
   dependencies:
     react-freeze "^1.0.0"
     warn-once "^0.1.0"
+
+react-native-storybook-loader@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/react-native-storybook-loader/-/react-native-storybook-loader-2.0.5.tgz#9c446a4235ac4f0d45b4f6419f2da9a9c4355255"
+  integrity sha512-9zO0kMv5DYLXJQ1vcjRrxGxsXucA9qiJV/IYtSXnb7gW39qYF93ZXgQRPQ7TKCwSlXMWsju/LXI2GpDtLx4b/Q==
+  dependencies:
+    find-up "^4.1.0"
+    glob "^7.1.1"
+    prettier "^2.0.5"
+    yargs "^15.4.1"
 
 react-native-swipe-gestures@^1.0.4:
   version "1.0.5"

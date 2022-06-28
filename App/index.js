@@ -1,9 +1,12 @@
 import React from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, LogBox} from 'react-native';
 import {Provider} from 'react-redux';
 import {store} from '../redux/store';
 import {Message} from '../redux/Message';
 import {Header} from 'react-native/Libraries/NewAppScreen';
+
+// ignore 'EventEmitter.removeListener(\'change\', ...): Method has been deprecated warning
+LogBox.ignoreLogs(["EventEmitter.removeListener"]);
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Press Cmd+D or shake for dev menu\n',
