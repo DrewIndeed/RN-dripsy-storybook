@@ -7,6 +7,7 @@ export const Button = ({
   children = '',
   outline = false,
 }) => {
+  // button container base styles
   let containerStyle = {
     backgroundColor: 'primary',
     paddingVertical: '$3',
@@ -16,6 +17,7 @@ export const Button = ({
     marginVertical: '$2',
   };
 
+  // button text base styles
   let textStyle = {
     color: 'background',
     alignSelf: 'center',
@@ -23,6 +25,7 @@ export const Button = ({
     fontWeight: 'black',
   };
 
+  // adjust styling objects if it is another variant
   if (outline) {
     containerStyle = {
       ...containerStyle,
@@ -35,8 +38,10 @@ export const Button = ({
     };
   }
 
+  // create a styled container using Dripsy style to use the theme
   const StyledTouchableOpacity = styled(TouchableOpacity)(containerStyle);
 
+  // render
   return (
     <StyledTouchableOpacity onPress={onPress}>
       <Text sx={textStyle}>{children}</Text>

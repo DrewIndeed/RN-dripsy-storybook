@@ -8,7 +8,13 @@ import {BufferView} from './decorators';
 storiesOf('Button', module)
   .addDecorator(BufferView)
   .add('default', () => (
-    <Button onPress={action('pressed-default')}>Press Me</Button>
+    <Button
+      onPress={() => {
+        action('pressed-default');
+        console.log('Andrew');
+      }}>
+      Press Me
+    </Button>
   ))
   .add('outline', () => (
     <Button onPress={action('pressed-outline')} outline>

@@ -1,6 +1,7 @@
 import React from 'react';
 import {DripsyProvider, makeTheme, View} from 'dripsy';
 
+// create app theme using Dripsy
 const theme = makeTheme({
   colors: {
     primary: 'orange',
@@ -25,9 +26,6 @@ const theme = makeTheme({
     $7: 256,
     $8: 512,
   },
-  shadows: {
-
-  },
   text: {
     primary: {
       fontSize: 40,
@@ -36,43 +34,12 @@ const theme = makeTheme({
       fontSize: 60,
     },
   },
-  sizes: {
-    container: 700,
-  },
-  textShadows: {
-    onImage: {
-      textShadowOffset: {width: 1, height: 1},
-      textShadowRadius: 5,
-      textShadowColor: 'gray',
-    },
-  },
-  linearGradients: {
-    strong: ['primary', 'secondary'],
-    light: ['red', 'green'],
-  },
-  layout: {
-    wide: {},
-    narrow: {},
-  },
-  // space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
-  space: {
-    $0: 0,
-    $1: 4,
-    $2: 8,
-    $3: 16,
-    $4: 32,
-    $5: 64,
-    $6: 128,
-    $7: 256,
-    $8: 512,
-  },
   fontWeights: {
     black: '500',
   },
 });
 
-
-// conttainer
+// theme provider View to provide through decorators
 export const BufferView = storyFn => (
   <DripsyProvider theme={theme}>
     <View
