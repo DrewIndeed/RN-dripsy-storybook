@@ -39,8 +39,9 @@ const theme = makeTheme({
       fontSize: 20,
     },
     buttonBase: {
+      fontSize: 12,
       alignSelf: 'center',
-      fontWeight: 'black',
+      fontWeight: 'bold',
     },
     buttonSolid: {
       color: 'white',
@@ -71,16 +72,24 @@ const theme = makeTheme({
     },
 
     // styles
-    outline: {
-      backgroundColor: 'transparent',
+    outlinePrimary: {
+      backgroundColor: 'white',
       borderRadius: 6,
       borderWidth: 1,
-      borderColor: 'transparent',
+      borderColor: 'lipstick',
     },
+
+    outlineSecondary: {
+      backgroundColor: 'white',
+      borderRadius: 6,
+      borderWidth: 1,
+      borderColor: 'slimdarkgray',
+    },
+
     solid: {
       color: 'white',
-      borderRadius: 0,
-      borderWidth: 0,
+      borderRadius: 6,
+      borderWidth: 1,
       borderColor: 'transparent',
     },
 
