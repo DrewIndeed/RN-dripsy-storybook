@@ -52,7 +52,9 @@ export const Button = ({
   // render
   return (
     <StyledTouchableOpacity onPress={onPress} variants={containerVariantArr}>
-      <Text variants={textVariantArr}>{children}</Text>
+      <Text variants={textVariantArr}>
+        {children}
+      </Text>
     </StyledTouchableOpacity>
   );
 };

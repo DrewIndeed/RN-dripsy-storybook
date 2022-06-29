@@ -19,6 +19,7 @@ const theme = makeTheme({
     pink: '#e60476',
     lipstick: '#fa2742',
   },
+
   space: {
     $none: 0,
     $0: 2,
@@ -31,18 +32,52 @@ const theme = makeTheme({
     $7: 256,
     $8: 512,
   },
+
+  form: {
+    input: {fontSize: 14, fontWeight: '500', paddingBottom: 10},
+    border: {
+      height: 1,
+      backgroundColor: 'darkgray',
+    },
+  },
+
   text: {
+    labelText: {
+      color: 'slimdarkgray',
+      fontSize: 18,
+      marginBottom: 10,
+    },
+
+    messageText: {
+      color: 'slimdarkgray',
+      fontSize: 12,
+      marginTop: 5,
+    },
+
+    messageSuccess: {
+      color: 'cyan',
+    },
+
+    messageError: {
+      color: 'lipstick',
+    },
+
+    // base
+    buttonBase: {
+      fontSize: 12,
+      alignSelf: 'center',
+      fontWeight: 'bold',
+    },
+
+    // sizes
     buttonMedium: {
       fontSize: 16,
     },
     buttonLarge: {
       fontSize: 20,
     },
-    buttonBase: {
-      fontSize: 12,
-      alignSelf: 'center',
-      fontWeight: 'bold',
-    },
+
+    // variants
     buttonSolid: {
       color: 'white',
     },
@@ -53,13 +88,18 @@ const theme = makeTheme({
       color: 'slimdarkgray',
     },
   },
+
   layout: {
     buff: {
       flex: 1,
       marginVertical: '$4',
       marginHorizontal: '$3',
     },
+    fieldWrapper: {
+      marginBottom: '$2',
+    },
   },
+
   buttons: {
     // sizes
     large: {

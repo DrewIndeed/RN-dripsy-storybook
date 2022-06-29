@@ -5,9 +5,13 @@
 
 function loadStories() {
   require('../App/stories/Button.stories');
+  require('../App/stories/Input.stories');
 }
 
-const stories = ['../App/stories/Button.stories'];
+const stories = [
+  '../App/stories/Button.stories',
+  '../App/stories/Input.stories',
+];
 
 module.exports = {
   loadStories,
