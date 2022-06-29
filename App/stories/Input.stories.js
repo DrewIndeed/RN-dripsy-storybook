@@ -3,6 +3,7 @@ import {action} from '@storybook/addon-actions';
 import {storiesOf} from '@storybook/react-native';
 import {Input as TextInput} from '../components/Input';
 import {BufferView} from './decorators';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const defaultTextInputProps = {
   label: 'Demo',
@@ -30,6 +31,24 @@ storiesOf('TextInput', module)
       {...defaultTextInputProps}
       message="This is an error"
       messageType="error"
+    />
+  ))
+  .add('with left icon', () => (
+    <TextInput
+      {...defaultTextInputProps}
+      label="Email"
+      value="andrew@gmail.com"
+      keyboardType="email-address"
+      iconLeft={<Icon name="rocket" size={30} color="#28559a" />}
+    />
+  ))
+  .add('with right icon', () => (
+    <TextInput
+      {...defaultTextInputProps}
+      label="Email"
+      value="andrew@gmail.com"
+      keyboardType="email-address"
+      iconRight={<Icon name="rocket" size={30} color="#28559a" />}
     />
   ))
   .add('email', () => (

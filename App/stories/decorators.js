@@ -34,7 +34,11 @@ const theme = makeTheme({
   },
 
   form: {
-    input: {fontSize: 14, fontWeight: '500', paddingBottom: 10},
+    input: {
+      flex: 1,
+      fontSize: 18,
+      fontWeight: '300',
+    },
     border: {
       height: 1,
       backgroundColor: 'darkgray',
@@ -44,7 +48,8 @@ const theme = makeTheme({
   text: {
     labelText: {
       color: 'slimdarkgray',
-      fontSize: 18,
+      fontSize: 20,
+      fontWeight: '500',
       marginBottom: 10,
     },
 
