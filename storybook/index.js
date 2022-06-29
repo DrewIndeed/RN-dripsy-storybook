@@ -4,7 +4,7 @@ import {name as appName} from '../app.json';
 
 import {getStorybookUI, configure, addDecorator} from '@storybook/react-native';
 import {withKnobs} from '@storybook/addon-knobs';
-import {withConsole, setConsoleOptions} from '@storybook/addon-console';
+import {setConsoleOptions} from '@storybook/addon-console';
 import {loadStories} from './storyLoader';
 
 import './rn-addons';

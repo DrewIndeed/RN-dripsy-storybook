@@ -4,19 +4,24 @@ import {DripsyProvider, makeTheme, View} from 'dripsy';
 // create app theme using Dripsy
 const theme = makeTheme({
   colors: {
-    primary: 'orange',
-    secondary: 'black',
-    background: 'white',
-    callout: 'pink',
-    accent: 'green',
-    muted: 'gray',
-    warning: 'yellow',
-    error: 'red',
-    gray: '#888',
+    white: '#fff',
+    lightgray: '#e8eae3',
+    bluegray: '#64748b',
+    midgray: '#6b6d70',
+    slimdarkgray: '#373833',
+    darkgray: '#181818',
+    black: '#000000',
+    cyan: '#2cccc3',
+    lightblue: '#4b9fe1',
+    midblue: '#28559a',
+    darkblue: '#150734',
+    yellow: '#facd3d',
+    pink: '#e60476',
+    lipstick: '#fa2742',
   },
   space: {
     $none: 0,
-    $0: 0,
+    $0: 2,
     $1: 4,
     $2: 8,
     $3: 16,
@@ -27,28 +32,73 @@ const theme = makeTheme({
     $8: 512,
   },
   text: {
-    primary: {
-      fontSize: 40,
+    buttonMedium: {
+      fontSize: 16,
     },
-    secondary: {
-      fontSize: 60,
+    buttonLarge: {
+      fontSize: 20,
+    },
+    buttonBase: {
+      alignSelf: 'center',
+      fontWeight: 'black',
+    },
+    buttonSolid: {
+      color: 'white',
+    },
+    buttonPrimaryOutline: {
+      color: 'lipstick',
+    },
+    buttonSecondarOutline: {
+      color: 'slimdarkgray',
     },
   },
-  fontWeights: {
-    black: '500',
+  layout: {
+    buff: {
+      flex: 1,
+      marginVertical: '$4',
+      marginHorizontal: '$3',
+    },
+  },
+  buttons: {
+    // sizes
+    large: {
+      paddingVertical: '$3',
+      paddingHorizontal: '$4',
+    },
+    medium: {
+      paddingVertical: '$2',
+      paddingHorizontal: '$3',
+    },
+
+    // styles
+    outline: {
+      backgroundColor: 'transparent',
+      borderRadius: 6,
+      borderWidth: 1,
+      borderColor: 'transparent',
+    },
+    solid: {
+      color: 'white',
+      borderRadius: 0,
+      borderWidth: 0,
+      borderColor: 'transparent',
+    },
+
+    // types
+    primary: {
+      backgroundColor: 'lipstick',
+      borderColor: 'lipstick',
+    },
+    secondary: {
+      backgroundColor: 'slimdarkgray',
+      borderColor: 'slimdarkgray',
+    },
   },
 });
 
 // theme provider View to provide through decorators
 export const BufferView = storyFn => (
   <DripsyProvider theme={theme}>
-    <View
-      sx={{
-        flex: 1,
-        marginVertical: '$4',
-        marginHorizontal: '$3',
-      }}>
-      {storyFn()}
-    </View>
+    <View variant="layout.buff">{storyFn()}</View>
   </DripsyProvider>
 );
